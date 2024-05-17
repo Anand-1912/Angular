@@ -154,8 +154,8 @@ bootstrapApplication(AppComponent, appConfig).catch((err) =>
 
 12. **styles.css**
 
-- Global style sheet using by Angular Project
-- used by all the Components and Directives
+- Global style sheet used by the Angular Project
+- Used by all the Components and Directives
 
 ## Queries
 
