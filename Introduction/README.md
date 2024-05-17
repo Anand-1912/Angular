@@ -32,7 +32,7 @@ _Advantages of using Angular_
 
 1. Testable
 2. Lots of utility code
-3. Applications developed using Angular are clean and lossely coupled. Easy to understand and maintain
+3. Applications developed using Angular are clean and loosely coupled. Easy to understand and maintain
 
 **Tools required**
 
