@@ -37,13 +37,13 @@ eg, if we have a component named 'app', then
 - app.component.html => View template
 - app.component.css => Style
 - app.component.spec.ts => specs (for testing)
-- app.compoent.module.ts => module
+- app.component.module.ts => module
 
 2. A component is represented using a TypeScript class
 
-3. It is decorated with @Component decorated to which an Object is passed.
+3. It is decorated with @Component decorator to which an Object is passed.
 
-4. The object has the properties that identifies the Selector, templateUrl and styleUrls.
+4. The object has the properties that identifies the selector, templateUrl and styleUrls.
 
 ```typescript
 import { Component } from "@angular/core";
@@ -61,7 +61,7 @@ export class AppComponent {
 }
 ```
 
-5. Properties defined inside the Components can be accessed inside the template and rendered using **data binding**.
+5. Properties defined in the Component class can be accessed inside the template and rendered using **data binding**.
 
 ```html
 <h1>Welcome to {{ title }}</h1>
@@ -69,7 +69,7 @@ export class AppComponent {
 
 ### Folder Structure and Project Files
 
-1. node_modules
+1. **node_modules**
 
 - Contains Packages needed by Angular and the application
 - Used only in local development environment
@@ -80,9 +80,9 @@ export class AppComponent {
 `npm install`
 `npm ci` (for CI/CD Purposes)
 
-2. .editorconfig
+2. **.editorconfig**
 
-- used to setup the team environment
+- Used to setup the team environment
 
 eg,
 
@@ -92,32 +92,30 @@ quote_type = single
 
 ```
 
-3. .gitignore
+3. **.gitignore**
 
 - Contains the list of files and folder that should not be checked in
 
-4. angular.json
+4. **angular.json**
 
 - Contains the Configuration of Project !
 
-5. package.json
+5. **package.json**
 
 - Contains the application and dev node package dependencies
 
-6. package-lock.json
+6. **package-lock.json**
 
-- contains the **exact** (version) dependencies and sub dependencies that are required by application.
+- Contains the **exact** (version) dependencies and sub dependencies that are required by project.
+- Used in CI/CD
+- Used by `npm ci`
 
-- used in CI/CD
+7. **tsconfig.json**
 
-- used by npm ci
-
-7. tsconfig
-
-- contains settings for TypeScript compiler.
+- Contains settings for TypeScript compiler.
 - The TypeScript uses these settings to compile the TypeScript to Javascript which can be understood by the browser.
 
-8. src
+8. **src**
 
 - Where dev spends a lot 😊
 - Contains the Application code like Component, Service class, Modules, etc.
@@ -126,20 +124,20 @@ quote_type = single
 - Inside the application, we will have files for components and modules.
 - Every Angular application in a Angular Project must have atleast one Component and Module.
 
-9. assets
+9. **assets**
 
 - We store the static assets eg. icons, images, text files
 - These are publicly accessible
 
   eg. localhost:4200/assets/some_image.jpg
 
-10. index.html
+10. **index.html**
 
-- main html file of the application
-- it will not by default has any script and style references
+- The main html file of the application
+- It will not by default has any script and style references
 - All the scripts will be injected into it by Angular during the build process
 
-11. main.ts
+11. **main.ts**
 
 - starting point of the angular application
 - bootstraps the app module.
@@ -154,7 +152,7 @@ bootstrapApplication(AppComponent, appConfig).catch((err) =>
 );
 ```
 
-12. styles.css
+12. **styles.css**
 
 - Global style sheet using by Angular Project
 - used by all the Components and Directives
