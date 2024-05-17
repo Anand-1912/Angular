@@ -117,12 +117,12 @@ quote_type = single
 
 8. **src**
 
-- Where dev spends a lot 😊
+- Where dev spends time a lot 😊
 - Contains the Application code like Component, Service class, Modules, etc.
 - An Angular Project can have many Applications.
 - Each application will have a folder inside the src. (eg. App)
 - Inside the application, we will have files for components and modules.
-- Every Angular application in a Angular Project must have atleast one Component and Module.
+- Every Angular application in an Angular Project must have atleast one Component and Module.
 
 9. **assets**
 
