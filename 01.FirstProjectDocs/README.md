@@ -33,11 +33,14 @@
 
 eg, if we have a component named 'app', then
 
-- app.component.ts => Typescript file
-- app.component.html => View template
-- app.component.css => Style
-- app.component.spec.ts => specs (for testing)
-- app.component.module.ts => module
+- **app.component.ts** => Typescript file
+- **app.component.html** => View template
+- **app.component.css** => Style
+- **app.component.spec.ts** => specs (for testing)
+- **app.module.ts** => module (not available in standalone apps)
+- **app.config.ts**
+
+- _note_ : standalone apps wont have modules. To create an app with module, use the command `ng new <app-name> --no-standalone`
 
 2. A component is represented using a TypeScript class
 
@@ -157,9 +160,40 @@ bootstrapApplication(AppComponent, appConfig).catch((err) =>
 - Global style sheet used by the Angular Project
 - Used by all the Components and Directives
 
+### Bootstrapping
+
+- Bootstrapping is the process of loading or initializing the Angular application.
+
+- `ng serve`
+
+  - When we use this command, the Angular CLI compiles the application, stores the compiled files in memory and directly starts it.
+  - If we make any changes to our Angular App, Angular CLI will recompile and update the file. (kind of nodemon)
+
+- `ng build`
+
+  - Builds the Angular Project
+  - We can see the compiled files in the **dist** folder.
+  - `runtime.js` is the webpack runtime file
+  - `polyfills.js` helps older browsers in executing modern JavaScript
+  - `main.js` contains the application code. it contains the Javascript code compiled from typescript
+  - `vendor.js` contains the scripts from Angular Core library and other 3rd Party libraries that we are using in Angular application.
+  - `styles.js` - the styles.css files will be bundled as a Javascript file and injected into index.html
+
+  - Angular CLI uses **Webpack** to traverse through our Angular App and it bundles JS and other files into one or more bundles. Angular itself sets the Configuration options for Webpack to work correctly.
+
+  - Refer the Bootstrap diagram for the flow.
+
 ## Queries
 
-1. where the build, serve etc scripts are located?
+1. Where the build, serve etc scripts are located?
 
-2. how additional node modules are installed when they are not explicitly mentioned in the package.json?
+2. How additional node modules are installed when they are not explicitly mentioned in the package.json?
    They are dependencies of dependices
+
+3. What are Modules in Modern Javascript?
+
+4. Webpack runtime?
+
+5. What is bundling?
+
+6. What is Webpack bundling?
